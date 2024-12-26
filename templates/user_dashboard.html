@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h2>All Available Books</h2>
+    <ul>
+        {% for book in books %}
+            <li><a href="/book/{{ book[0] }}">{{ book[1] }} by {{ book[2] }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/logout">Logout</a>
+</body>
+</html>
